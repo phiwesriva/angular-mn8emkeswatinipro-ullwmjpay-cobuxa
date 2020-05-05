@@ -39,6 +39,12 @@ import { HousefComponent } from './housef/housef.component';
 import { HinsureComponent } from './hinsure/hinsure.component';
 import { CommdComponent } from './commd/commd.component';
 import { ResidComponent } from './about/resid/resid.component';
+import { LoanComponent } from './loan/loan.component';
+import { RentComponent } from './rent/rent.component';
+import { Rent2Component } from './rent2/rent2.component';
+import { RepofComponent } from './repof/repof.component';
+import { RepoComponent } from './repo/repo.component';
+import { PresssComponent } from './presss/presss.component';
 
 
 
@@ -132,6 +138,12 @@ const appRoutes: Routes = [
     HinsureComponent,
     CommdComponent,
     ResidComponent,
+    LoanComponent,
+    RentComponent,
+    Rent2Component,
+    RepofComponent,
+    RepoComponent,
+    PresssComponent,
     
   ],
   bootstrap: [ AppComponent ],
