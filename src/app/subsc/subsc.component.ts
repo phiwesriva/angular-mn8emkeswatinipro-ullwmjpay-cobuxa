@@ -10,24 +10,24 @@ import { FormControl } from '@angular/forms';
 })
 export class SubscComponent implements OnInit {
 subscForm;
-insights = new FormControl('');
+/*insights = new FormControl('');*/
   constructor(
     private formBuilder: FormBuilder,) { 
     this.subscForm = this.formBuilder.group({
 
-      insights: '',
-      copiesperissue: '',
+     
+      /*copiesperissue: '',*/
       nameandsurname: '',
       Cname: '',
-      address: '',
-      Tnumber: '',
+      /*address: '',*/
+      /*Tnumber: '',*/
       Cnumber: '',
       Eaddress: '',
-      Eaddress: '',
       DOB: '',
-      Paddress: '',
+      insights: ''
+       /*Paddress: '',
       POP: '',
-      Queries: ''
+      Queries: ''*/
     });}
 
   ngOnInit() {

@@ -1,5 +1,6 @@
-<form oninput="x.value=parseInt(insights.value)+parseInt(copiesperissue.value)" [formGroup]="subscForm" (ngSubmit)="onSubmit(subscForm.value)">
+<!--<form oninput="x.value=parseInt(insights.value)+parseInt(copiesperissue.value)" [formGroup]="subscForm" (ngSubmit)="onSubmit(subscForm.value)">-->
 
+<form [formGroup]="subscForm" (ngSubmit)="onSubmit(subscForm.value)">
 <table class="center" style="width:100%">
  <tr>
   <th colspan="5">
@@ -9,28 +10,29 @@
     <div class="dropdown-content">
       <a [routerLink]="['/resi']"><h2>Residential News</h2></a>
 <a [routerLink]="['/comm']"><h2>Commercial News</h2></a>
-<a [routerLink]="['/landl']"><h2>Industrial News</h2></a>
+<a [routerLink]="['/free']"><h2>Free Downloads</h2></a>
+<!--<a [routerLink]="['/landl']"><h2>Industrial News</h2></a>
 <a [routerLink]="['/inter']"><h2>Lifestyle and Leisure</h2></a>
 <a [routerLink]="['/inter']"><h2>International News</h2></a>
-<a [routerLink]="['/inter']"><h2>Legal</h2></a>
+<a [routerLink]="['/inter']"><h2>Legal</h2></a>-->
     </div>
   </li>
+<li><a [routerLink]="['/covid']" class="button fancy-button"><h2>COVID-19</h2></a></li>
 <li><a [routerLink]="['/news']" class="button fancy-button"><h2>NEWS</h2></a></li>
 <li><a [routerLink]="['/podcast']" class="button fancy-button"><h2>PODCASTS</h2></a></li>
-<li><a [routerLink]="['/advert']" class="button fancy-button"><h2>ADVERTISE</h2></a></li>
 <li><a [routerLink]="['/subsc']" class="button fancy-button"><h2>SUBSCRIBE</h2></a></li>
 <li><a [routerLink]="['/contact']" class="button fancy-button"><h2>CONTACT US</h2></a></li>
-<li><a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i></a></li>
  </ul> </th></tr>
 
   <tr align ="center">
     
     <td colspan="4"><h1>Subscribe!!!!</h1></td>
 </tr>
+<!--
 <tr>
   <td colspan="3"><img src="https://raw.githubusercontent.com/phiwesriva/angular-mn8emkeswatinipro-e6w3hm/master/src/assets/subscribe2.png" width="94%"  height="132"></td></tr>
 <tr> 
-<!--<h2>2020 ESWATINI PROPERTY REVIEW SUBSCRIPTION FORM</h2>-->
+<!--<h2>2020 ESWATINI PROPERTY REVIEW SUBSCRIPTION FORM</h2>
 <td colspan="4"><label for="Price"> Price per annum:</label> E300 including delivery <label for="frequency">Frequency:</label> Every Two Months <label>Number of copies per annum:</label>6  
    <label for="package">Package includes:</label> Eswatini Property Review Print x 6, Online Edition, Podcasts and Newsletters<label>Banking Details FNB Eswatini │ Account Name: Rasper Media (PTY) LTD Account No.: 627 4072 6792 │ Branch Code: 280 164</label>
 
@@ -38,7 +40,7 @@
 
 <!--<label for="insights">
 Insights(Research)
-</label>-->
+</label>
 <tr>
   <td colspan="4">
    For an additional E99  once off you get Insights every four months,make your selection below
@@ -51,7 +53,7 @@ Insights(Research)
 <option value="99">Insights(Research)</option>
 </select></td>
 </tr>
-<tr>
+<tr>-->
 <!--
 <p>
   Value: {{ insights.value }}
@@ -60,7 +62,7 @@ Insights(Research)
 
   <!-- <label for="copiesperissue">
       Select number of copies per issue
-    </label>-->
+    </label>
 
   <td colspan="2"><select matNativeControl required id="copiesperissue">
 <option value="0">Select number of copies per issue</option>
@@ -88,16 +90,17 @@ Insights(Research)
 </tr>
 
 <tr align="center"><td colspan="2">Your total is going to be = E <output name="x" for="insights copiesperissue"></output></td>
-</tr>
+</tr>--->
 <tr>
 <td><label for="nameandsurname">Name</label></td>
 <td><input id="nameandsurname" type="text" formControlName="nameandsurname"></td>
 </tr>
+
 <tr>
 <td><label for="Cname">Company Name(If applicable)</label></td>
 <td><input id="Cname" type="text" formControlName="Cname"></td>
 </tr>
-
+<!--
 <tr>
 <td><label for="address">Address</label></td> 
 <td><input id="address" type="text" formControlName="address"></td>
@@ -105,10 +108,10 @@ Insights(Research)
 <tr>
 <td><label for="Tnumber">Tel Number </label></td>
 <td><input id="Tnumber" type="text" formControlName="Tnumber"></td>
-</tr>
+</tr>-->
 
 <tr align="center">
-<td><label for="Cnumber">Cell Number</label></td>
+<td><label for="Cnumber">Contact Number</label></td>
 <td><input id="Cnumber" type="text" formControlName="Cnumber"></td>
 </tr>
 
@@ -118,9 +121,22 @@ Insights(Research)
 </tr>
 
 <tr align="center">
-<td><label for="DOB">Date of Birth yyyy-mm-dd(Password for online edition)</label></td>
+<td><label for="DOB">Year Of Birth</label></td>
 <td><input id="DOB" type="text" formControlName="DOB"></td>
 </tr>
+
+<tr align="center">
+  <td><label for="insights">Region</label></td>
+  <td><select matNativeControl required id="insights">
+  <option>Please select</option>
+<option>Hhohho</option>
+<option>Manzini</option>
+<option>Lubombo</option>
+<option>Shiselweni</option>
+</select></td>
+</tr>
+
+<!--
 <tr>
 <td><label for="Paddress">Postal Address</label></td>
 <td><input id="Paddress" type="text" formControlName="Paddress"></td>
@@ -134,7 +150,7 @@ Insights(Research)
 <tr>
   <td colspan="2"><label for="Queries">Queries:</label></td>
   <td><input id="Queries" type="text" formControlName="Queries"></td>
-</tr>
+</tr>-->
 
 <tr align="center">
   <td colspan="4"><button class="button fancy-button" type="submit">SUBMIT</button></td>
