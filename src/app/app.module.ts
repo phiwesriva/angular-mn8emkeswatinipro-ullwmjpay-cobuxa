@@ -45,6 +45,7 @@ import { Rent2Component } from './rent2/rent2.component';
 import { RepofComponent } from './repof/repof.component';
 import { RepoComponent } from './repo/repo.component';
 import { PresssComponent } from './presss/presss.component';
+import { CovidComponent } from './covid/covid.component';
 
 
 
@@ -98,6 +99,7 @@ const appRoutes: Routes = [
       { path: 'housef', component: HousefComponent },
       { path: 'commd', component: CommdComponent },
       { path: 'resid', component: ResidComponent },
+      { path: 'covid', component: CovComponent },
       { path: '**', component: PageNotFoundComponent },
       { path: '',   redirectTo: '/sections', pathMatch: 'full' },
       
@@ -144,6 +146,7 @@ const appRoutes: Routes = [
     RepofComponent,
     RepoComponent,
     PresssComponent,
+    CovidComponent,
     
   ],
   bootstrap: [ AppComponent ],
